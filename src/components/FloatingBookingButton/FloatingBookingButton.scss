@@ -1,0 +1,39 @@
+.floatingBookingButton {
+  background: #ecefed;
+  border-radius: 50%;
+  bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  height: 4.5rem;
+  opacity: 0;
+  padding: 0.25rem;
+  position: fixed;
+  right: 2rem;
+  transform: translateX(0) translateY(100%);
+  transition: opacity 200ms ease-out, transform 300ms ease-in;
+  width: 4.5rem;
+  z-index: 2;
+  
+  @media(min-width: 768px) {
+    bottom: 3rem;
+    height: 5rem;
+    right: 4rem;
+    width: 5rem;
+  }
+
+  
+  &__img {
+    width: 100%;
+  }
+  
+  &:active {
+    scale: 0.95;
+  }
+  
+  &.show {
+    display: block;
+    transform: translateX(0) translateY(0);
+    transition: opacity 200ms ease-in, transform 300ms ease-out;
+    opacity: 1;
+  }
+}

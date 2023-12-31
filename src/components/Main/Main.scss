@@ -1,0 +1,112 @@
+.main {
+  background-color: var(--main-backing-color);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--body-font);
+  margin-top: -100vh;
+  padding-top: 6rem;
+
+  @media (min-width: 768px) {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-inline: auto;
+    margin-top: 0;
+    max-width: var(--max-width);
+    min-height: calc(100vh - (14rem));
+    padding-top: 0;
+  }
+  
+  &__banner {
+    flex-grow: 1;
+    padding: 1.25rem;
+    width: 100%;
+  
+    @media(min-width: 768px) {
+      grid-template-rows: 50% 1fr;
+      padding: 2rem;
+    }
+  }
+}
+
+.banner {
+
+  &__wrapper {
+  position: relative;
+  }
+
+  &__img {
+    border-radius: 15px;
+    height: 15rem;
+    max-width: 100%;
+    margin-top: 2rem;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  
+    @media(min-width: 768px) {
+      margin-top: 0;
+      z-index: 0;
+    }
+  
+    @media (min-width: 1080px) {
+      height: 25rem;
+    }
+  }
+  
+  &__heading {
+    color: var(--accent-green-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8vw;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: absolute;
+    z-index: 0;
+  }
+  
+  &__header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  &__promo-text {
+    color: var(--accent-green-color);
+    font-size: max(4vw, 2.2rem);
+    font-weight: 400;
+    line-height: 2;
+    margin-inline: auto;
+    margin-top: 3rem;
+    text-align: center;
+    width: 80%;
+  }
+  
+  &__logo {
+    bottom: 1rem;
+    left: 3rem;
+    position: absolute;
+    width: 8rem;
+  
+    @media(min-width: 768px) {
+      width: 9rem;
+    }
+  
+    @media (min-width: 1080px) {
+      width: 10rem;
+    }
+  }
+}
+
+
+.main__cards {
+  align-items: center;
+  background-color: var(--main-backing-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+
+  @media (min-width: 1080px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+}

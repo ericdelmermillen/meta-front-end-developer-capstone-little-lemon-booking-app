@@ -1,0 +1,58 @@
+.header {
+  align-items: center;
+  background: var(--main-backing-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  margin-top: 0;
+  position: sticky;
+  top: 0;
+  transition: all 600ms ease;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    left: 0;
+    padding-block: 1rem;
+    position: fixed;
+    right: 0;
+    }
+    
+    &.hide {
+      top: -6rem;
+    
+      @media(min-width: 768px) {
+        top: 0;
+      }
+    }
+    
+    &__home-button {
+      text-align: center;
+    } 
+    
+    &__logo {
+      max-width: 20rem;
+      width: 60%;
+    
+      @media (min-width: 768px) {
+        width: 26rem;
+      }
+    }
+    
+    &__menu-toggle {
+      cursor: pointer;
+      height: 2.5rem;
+      padding: 0.75rem;
+      position: absolute;
+      right: 2rem;
+      top: 1.75rem;
+    
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+}
