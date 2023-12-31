@@ -44,4 +44,31 @@
     transform: translateX(50%) translateY(0);
     transition: opacity 200ms ease-in, transform 300ms ease-out;
   }
+
+
+  &__button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--logo-green-color);
+    color: var(--off-white-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    width: 8rem;
+  
+    &:hover {
+      background-color: var(--button-hover-color);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
 }

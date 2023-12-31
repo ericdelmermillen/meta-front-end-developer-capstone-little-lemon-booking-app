@@ -82,7 +82,7 @@ const BookingForm = () => {
   return (
     <>
       <form className={`bookingForm ${showBookingForm && "show"}`}>
-        <h1 className="bookingForm__h1">Reserve A Table</h1>
+        {/* <h1 className="bookingForm__h1">Reserve A Table</h1> */}
 
         <label 
           className="bookingForm__label" 
@@ -126,24 +126,25 @@ const BookingForm = () => {
               id="reservationDate" />
           </div>
           
-          <div className="bookingForm__guests-selector">
-            <label 
-              className="bookingForm__label" 
-              htmlFor="guestNumber">
-                Seating for:
-            </label>
-              <GuestNumberSelector
-                className="bookingForm__input"
-                id="guestNumber"
-                aria-label="Guest Number" />
+          <div className="bookingForm__guestsAndTime">
+            <div className="bookingForm__guests-selector">
+              <label
+                className="bookingForm__label"
+                htmlFor="guestNumber">
+                  Seating for:
+              </label>
+                <GuestNumberSelector
+                  className="bookingForm__input"
+                  id="guestNumber"
+                  aria-label="Guest Number" />
+            </div>
+            <div className="bookingForm__time">
+              <label className="bookingForm__label" htmlFor="reservationTime">Reservation Time:</label>
+              <ReservationTimePicker
+                id="reservationTime" />
+            </div>
           </div>
 
-          <div className="bookingForm__time">
-            <label className="bookingForm__label" htmlFor="reservationTime">Reservation Time:</label>
-            <ReservationTimePicker 
-              id="reservationTime"
-            />
-          </div>
         </div>
 
         <div className="bookingForm__specialRequests">
@@ -153,7 +154,7 @@ const BookingForm = () => {
               Extra Info:
           </label>
           <textarea
-            className="bookingForm__input"
+            className="bookingForm__input bookingForm__extra-info"
             value={extraInfo}
             id="extraInfo"
             onChange={(e) => setExtraInfo(e.target.value)}
@@ -161,15 +162,17 @@ const BookingForm = () => {
             placeholder="Special Requests"/>
         </div>
 
-        <div 
-          className="bookingForm__button"
-          onClick={() => setShowBookingForm(false)}>
-          Cancel
-        </div>
-        <div
-          className="bookingForm__button"
-          onClick={handleSubmit}>
-          Confirm
+        <div className="bookingForm__button-container">
+          <div
+            className="bookingForm__button"
+            onClick={() => setShowBookingForm(false)}>
+            Cancel
+          </div>
+          <div
+            className="bookingForm__button"
+            onClick={handleSubmit}>
+            Confirm
+          </div>
         </div>
       </form>
     </>
