@@ -7,7 +7,7 @@ import Nav from "../src/components/Nav/Nav.jsx";
 import BookingForm from './components/BookingForm/BookingForm.jsx';
 import BookingConfirmed from './components/BookingConfirmed/BookingConfirmed.jsx';
 import Footer from '../src/components/Footer/Footer.jsx';
-import FloatingBookingButton from "../src/components/FloatingBookingButton/FloatingBookingButton.jsx"
+import FloatingBookingButton from "../src/components/FloatingBookingButton/FloatingBookingButton.jsx";
 
 import Home from './components/Pages/Home/Home.jsx';
 import Menu from './components/Pages/Menu/Menu.jsx';
@@ -86,4 +86,4 @@ const App = () => {
 )};
 
 export default App;
-export { AppContext, useContext };;
+export { AppContext, useContext };
