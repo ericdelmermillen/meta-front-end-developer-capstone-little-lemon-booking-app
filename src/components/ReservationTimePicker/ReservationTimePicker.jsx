@@ -1,6 +1,6 @@
 import "./ReservationTimePicker.scss";
 import { useContext } from "react";
-import { AppContext } from "../../App.jsx";
+import { AppContext } from "../../index.js";
 // import { useState } from 'react';
 
 const ReservationTimePicker = () => {

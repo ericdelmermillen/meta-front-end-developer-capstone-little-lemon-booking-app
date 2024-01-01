@@ -3,7 +3,7 @@ import headerLogo from "../../assets/lemon_text_logo_green.png";
 import hamburger from "../../assets/hamburger.png";
 import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
-import { AppContext } from "../../App.jsx";
+import { AppContext } from "../../index.js";
 
 const Header = () => {
   const { 

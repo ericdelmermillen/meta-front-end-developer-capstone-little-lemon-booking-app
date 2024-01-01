@@ -1,5 +1,5 @@
 import "./FloatingBookingButton.scss";
-import { AppContext } from "../../App.jsx";
+import { AppContext } from "../../index.js";
 import { useContext } from "react";
 import floatingBookingButton from "../../assets/little-lemon-floating-button.png";
 

@@ -2,7 +2,7 @@ import "./Nav.scss";
 import menuToggle from "../../assets/menu-x.png";
 import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
-import { AppContext } from "../../App.jsx";
+import { AppContext } from "../../index.js";
 
 const Nav = () => {
   const { 

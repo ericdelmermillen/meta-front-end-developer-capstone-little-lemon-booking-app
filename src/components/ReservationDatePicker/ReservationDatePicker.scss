@@ -3,6 +3,7 @@
   min-width: 15rem;
   
   &__input {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
     // text-align: center;
     // border: 2px solid blue;
     border-radius: 8px;
@@ -15,6 +16,8 @@
     font-family: inherit;
     font-size: 1rem;
     padding: 0.5rem 0.5rem;
+    border: 1px solid var(--flat-black-color);
+    color: var(--flat-black-color);
   }
 
   &__input:focus {

@@ -1,6 +1,6 @@
 import "./BookingForm.scss";
 import { useState, useContext } from "react";
-import { AppContext } from "../../App.jsx";
+import { AppContext } from "../../index.js";
 import ReservationDatePicker from "../ReservationDatePicker/ReservationDatePicker.jsx";
 import ReservationTimePicker from "../ReservationTimePicker/ReservationTimePicker.jsx";
 import GuestNumberSelector from "../GuestNumberSelector/GuestNumberSelector.jsx";
@@ -23,13 +23,17 @@ const BookingForm = () => {
     setSelectedPeriod,
     guestNumber, 
     setGuestNumber,
+    reservationName, 
+    setReservationName,
+    reservationEmail, 
+    setReservationEmail,
+    extraInfo, 
+    setExtraInfo,
+    nameIsInvalid, 
+    setNameIsInvalid,
+    emailIsInvalid, 
+    setemailIsInvalid
   } = useContext(AppContext);
-
-  const [ reservationName, setReservationName ] = useState("");
-  const [ reservationEmail, setReservationEmail ] = useState("");
-  const [ extraInfo, setExtraInfo ] = useState("");
-  const [ nameIsInvalid, setNameIsInvalid ] = useState(null);
-  const [ emailIsInvalid, setemailIsInvalid ] = useState(null);
 
   const nameValidation = () => {
     const isInvalidName = reservationName.trim().length < 2;
@@ -52,15 +56,33 @@ const BookingForm = () => {
     emailIsInvalid && emailValidation()
   }
 
-  const handleSubmit = () => {
+  const clearInputs = () => {
+    setReservationName("");
+    setReservationEmail("");
+    setExtraInfo("");
+    setNameIsInvalid(null);
+    setemailIsInvalid(null);
+    setReservationDate(new Date());
+    setGuestNumber(1);
+    setSelectedHour(new Date().getHours() > 12 ? (new Date().getHours() % 12) + 1: (new Date().getHours() + 1));
+    setSelectedMinute(0);
+    setSelectedPeriod(new Date().getHours() < 12 ? 'AM' : 'PM');
+    setExtraInfo("")
+    setGuestNumber(1);
+  }
 
+  const handleCancel = () => {
+    setShowBookingForm(false);
+    clearInputs();
+
+  }
+
+  const handleSubmit = () => {
     nameValidation()
-    console.log(nameIsInvalid); 
 
     const dateString = (
       `${new Date(reservationDate).getDate()}-${new Date(reservationDate).getMonth() + 1}-${new Date(reservationDate).getFullYear()}`)
     
-    // console.log(reservationDate)
     const reservationTimeString = selectedPeriod === 'PM' ? `${selectedHour + 12}:${selectedMinute === 0 ? "00:00" : selectedMinute}:00` : `${selectedPeriod === 'PM' ? selectedHour + 12 : selectedHour}:${selectedMinute === 0 ? "00" : selectedMinute}` + ":00"
 
     // console.log(new Date(`${dateString} ${reservationTimeString}`))
@@ -165,7 +187,7 @@ const BookingForm = () => {
         <div className="bookingForm__button-container">
           <div
             className="bookingForm__button"
-            onClick={() => setShowBookingForm(false)}>
+            onClick={handleCancel}>
             Cancel
           </div>
           <div

@@ -2,7 +2,7 @@ import "./ReservationDatePicker.scss";
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState, useContext } from 'react';
 import DatePicker from 'react-datepicker';
-import { AppContext } from "../../App.jsx";
+import { AppContext } from "../../index.js";
 
 const ReservationDatePicker = () => {
   const { 
