@@ -22,7 +22,7 @@ const AppProvider = ({ children }) => {
   const [ reservationEmail, setReservationEmail ] = useState("");
   const [ extraInfo, setExtraInfo ] = useState("");
   const [ nameIsInvalid, setNameIsInvalid ] = useState(null);
-  const [ emailIsInvalid, setemailIsInvalid ] = useState(null);
+  const [ emailIsInvalid, setEmailIsInvalid ] = useState(null);
   
   const contextValues = {
     showNav,
@@ -58,7 +58,7 @@ const AppProvider = ({ children }) => {
     nameIsInvalid, 
     setNameIsInvalid,
     emailIsInvalid, 
-    setemailIsInvalid
+    setEmailIsInvalid
   };
   return <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>;
 };

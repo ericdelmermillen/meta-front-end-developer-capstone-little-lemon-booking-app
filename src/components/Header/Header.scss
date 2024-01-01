@@ -35,10 +35,17 @@
     } 
     
     &__logo {
-      max-width: 20rem;
+      max-width: 17rem;
+      margin-top: 0.25rem;
       width: 60%;
-    
+      
+      @media(min-width: 350px) {
+        width: 65%;
+        max-width: 20rem;
+      }
+      
       @media (min-width: 768px) {
+        margin-top: 0rem;
         width: 26rem;
       }
     }

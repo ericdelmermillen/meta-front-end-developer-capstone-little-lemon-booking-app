@@ -84,23 +84,20 @@
     gap: 0.5rem;
     
     @media(min-width: 768px) {
-      justify-content: space-between;
       flex-direction: row;
       gap: 0;
-
     }
   }
-
+  
   &__date {
     display: flex;
     flex-direction: column;
-    width: 15rem;
   }
 
   &__time {
     display: flex;
     flex-direction: column;
-    width: 10rem;
+    width: 9rem;
   }
 
   &__guests-selector {
@@ -161,4 +158,3 @@
     }
   }
 }
-

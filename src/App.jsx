@@ -63,7 +63,7 @@ import NotFound from './components/Pages/NotFound/NotFound.jsx';
     nameIsInvalid, 
     setNameIsInvalid,
     emailIsInvalid, 
-    setemailIsInvalid
+    setEmailIsInvalid
   } = useContext(AppContext);
 
 
@@ -72,7 +72,7 @@ const clearInputs = () => {
     setReservationEmail("");
     setExtraInfo("");
     setNameIsInvalid(null);
-    setemailIsInvalid(null);
+    setEmailIsInvalid(null);
     setReservationDate(new Date());
     setGuestNumber(1);
     setSelectedHour(new Date().getHours() > 12 ? (new Date().getHours() % 12) + 1: (new Date().getHours() + 1));
@@ -80,6 +80,7 @@ const clearInputs = () => {
     setSelectedPeriod(new Date().getHours() < 12 ? 'AM' : 'PM');
     setExtraInfo("")
     setGuestNumber(1);
+    setFormattedReservationDate(new Date().toLocaleDateString())
   }
 
   return (

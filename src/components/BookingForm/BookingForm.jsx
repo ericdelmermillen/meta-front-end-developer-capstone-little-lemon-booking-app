@@ -32,7 +32,8 @@ const BookingForm = () => {
     nameIsInvalid, 
     setNameIsInvalid,
     emailIsInvalid, 
-    setemailIsInvalid
+    setEmailIsInvalid,
+    windowWidth
   } = useContext(AppContext);
 
   const nameValidation = () => {
@@ -43,7 +44,7 @@ const BookingForm = () => {
   const emailValidation = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isInvalidEmail = !emailRegex.test(reservationEmail);
-    setemailIsInvalid(isInvalidEmail);
+    setEmailIsInvalid(isInvalidEmail);
   }
 
   const handleNameChange = (e) => {
@@ -61,7 +62,7 @@ const BookingForm = () => {
     setReservationEmail("");
     setExtraInfo("");
     setNameIsInvalid(null);
-    setemailIsInvalid(null);
+    setEmailIsInvalid(null);
     setReservationDate(new Date());
     setGuestNumber(1);
     setSelectedHour(new Date().getHours() > 12 ? (new Date().getHours() % 12) + 1: (new Date().getHours() + 1));

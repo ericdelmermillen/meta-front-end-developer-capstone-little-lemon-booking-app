@@ -9,7 +9,9 @@ const ReservationDatePicker = () => {
     reservationDate,
     setReservationDate,
     formattedReservationDate, 
-    setFormattedReservationDate
+    setFormattedReservationDate,
+    windowWidth,
+    setWindowWidth
   } = useContext(AppContext);
 
   const formatDate = (date) => {
@@ -32,7 +34,7 @@ const ReservationDatePicker = () => {
           }
         }
         value={reservationDate ? formatDate(reservationDate) : ''}
-        className="reservationDatePicker__input"
+        className={`reservationDatePicker__input ${windowWidth > 400 && "wide"}`}
         minDate={new Date()}
       />
     </>
