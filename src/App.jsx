@@ -18,18 +18,6 @@ import NotFound from './components/Pages/NotFound/NotFound.jsx';
   
   const App = () => {
   const { 
-    // showBookingConfirmed, 
-    // setShowBookingConfirmed,
-    // formattedReservationDate, 
-    // setFormattedReservationDate,
-    // selectedHour, 
-    // setSelectedHour,
-    // selectedMinute, 
-    // setSelectedMinute,
-    // selectedPeriod, 
-    // setSelectedPeriod,
-    // guestNumber, 
-    // setGuestNumber
     showNav,
     setShowNav,
     scrollYPos,
@@ -105,4 +93,3 @@ const clearInputs = () => {
 )};
 
 export default App;
-// export { AppContext, useContext };

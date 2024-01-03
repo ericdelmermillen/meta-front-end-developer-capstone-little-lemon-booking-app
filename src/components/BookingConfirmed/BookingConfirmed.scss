@@ -17,7 +17,7 @@
   transform: translateX(50%) translateY(100%);
   transition: opacity 200ms ease-out, transform 300ms ease-in;
   width: 85%;
-  z-index: 2;
+  z-index: 3;
 
   @media(min-width: 768px) {
     top: 4.5rem;
@@ -25,8 +25,8 @@
   }
 
   &__heading {
-    text-align: center;
     color: var(--logo-green-color);
+    text-align: center;
   }
 
   &__lemon {
@@ -54,13 +54,13 @@
 
 
   &__button {
+    color: var(--off-white-color);
+    cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
     background-color: var(--logo-green-color);
-    color: var(--off-white-color);
     transition: background-color 0.3s ease, color 0.3s ease;
     text-align: center;
     width: 8rem;
@@ -70,7 +70,9 @@
     }
   
     &:hover {
-      background-color: var(--button-hover-color);
+      background-color: var(--off-white-color);
+      color: var(--logo-green-color);
+      outline: 2px solid var(--logo-green-color);
     }
   
     &:focus {

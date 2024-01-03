@@ -162,7 +162,7 @@ const BookingForm = () => {
                   aria-label="Guest Number" />
             </div>
             <div className="bookingForm__time">
-              <label className="bookingForm__label" htmlFor="reservationTime">Reservation Time:</label>
+              <label className="bookingForm__label" htmlFor="reservationTime">{windowWidth > 400 ? "Reservation Time:": "Time"}</label>
               <ReservationTimePicker
                 id="reservationTime" />
             </div>
