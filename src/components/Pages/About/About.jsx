@@ -1,5 +1,4 @@
 import "./About.scss";
-import server from "../../../assets/images/server.jpg"
 
 const About = () => {
   return (
@@ -13,11 +12,11 @@ const About = () => {
                 Where Tradition Meets Innovation
               </h2>
               <p className="hero__blurb">
-              Our culinary journey is rooted in time-honored recipes with a modern twist. We invite you to savor the essence of tradition.
+              Tradition with a modern twist. Savor the essence of our culinary journey.
               </p>
             </div>
             <div className="hero__right">
-              <div className="hero__img"></div>
+              <div className="hero__img--about"></div>
               <div className="hero__overlay"></div>
             </div>
 

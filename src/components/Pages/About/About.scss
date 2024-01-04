@@ -91,7 +91,7 @@
   }
   
   &__blurb { 
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1.75px;
     line-height: 2.25;
@@ -121,12 +121,12 @@
     }
   }
    
-  &__img {
+  &__img--about {
     background-image: url(../../../assets/images/server.jpg);
-    height: calc(100dvh - (6rem));
     background-position: center center; 
     background-repeat: no-repeat; 
     background-size: cover; 
+    height: calc(100dvh - (6rem));
     max-width: 100%;
 
     @media(min-width: 768px) {
