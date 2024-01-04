@@ -1,6 +1,8 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .header {
   align-items: center;
-  background: var(--main-backing-color);
+  background: $main-backing-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   display: flex;
   height: 6rem;
@@ -40,8 +42,8 @@
       width: 60%;
       
       @media(min-width: 350px) {
-        width: 65%;
         max-width: 20rem;
+        width: 65%;
       }
       
       @media (min-width: 768px) {

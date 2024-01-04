@@ -1,30 +1,21 @@
+@use "../../../styles/partials/variables.scss" as *;
+
 .notFound {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: calc(100dvh - (6rem + 2rem));
   margin-top: calc(-100dvh + 4rem);
   
   @media(min-width: 768px) {
     margin-top: 0;
   }
-
-  // &__content {
-  //   margin-top: 2rem;
-  //   border: 2px solid red;
-    
-  //   @media(min-width: 768px) {
-  //     margin-top: 0;
-
-  //   }
-  // }
   
-
   &__pic {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   &__boy {
@@ -37,13 +28,12 @@
 
     @media(min-width: 1080px) {
       width: 25vw;
-
     }
   }
 
   &__header, &__sub-header {
     text-align: center;
-    color: #495e57;
+    color: $logo-green-color;
     line-height: 1.5
   }
 }

@@ -1,10 +1,11 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .bookingForm {
   align-items: center;
-  background: var(--main-backing-color);
-  border: 1px solid var(--logo-green-color);
+  background: $main-backing-color;
+  border: 1px solid $logo-green-color;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  color: var(--flat-black-color);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -37,7 +38,7 @@
   }
 
   &__input {
-    border: 1px solid var(--flat-black-color);
+    border: 1px solid $flat-black-color;
     border-radius: 8px;
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
     font-family: inherit;
@@ -50,7 +51,7 @@
   }
 
   &__input:focus {
-    outline: 1px solid var(--logo-green-color);
+    outline: 1px solid $logo-green-color;
   }
 
   &__specialRequests {
@@ -60,7 +61,7 @@
   }
   
   &__extra-info {
-    border: 1px solid var(--flat-black-color);
+    border: 1px solid $flat-black-color;
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
     height: 8rem;
     max-height: 7rem;
@@ -128,9 +129,9 @@
   }
   
   &__button {
-    background-color: var(--logo-green-color);
+    background-color: $logo-green-color;
     border-radius: 5px;
-    color: var(--off-white-color);
+    color: $off-white-color;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
@@ -140,9 +141,9 @@
     width: 8rem;
   
     &:hover {
-      background-color: var(--off-white-color);
-      color: var(--logo-green-color);
-      outline: 2px solid var(--logo-green-color);
+      background-color: $off-white-color;
+      color: $logo-green-color;
+      outline: 2px solid $logo-green-color;
     }
   
     &:focus {

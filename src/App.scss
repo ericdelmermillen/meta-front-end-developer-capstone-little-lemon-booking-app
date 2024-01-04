@@ -1,3 +1,5 @@
+@use "./styles/partials/variables" as *;
+
 /* css reset */
 *, 
 *::before, 
@@ -7,38 +9,22 @@
   padding: 0;
 }
 
-// move to mixin
-:root {
-  --body-font: 'Roboto', Arial, Helvetica, sans-serif;
-
-  /*colors */
-  --accent-green-color: #485e56;
-  --flat-black-color: #2C3E50;
-  --logo-green-color: #495e57;
-  --button-hover-color: #567369;
-  --main-backing-color: #ecefed;
-  --off-white-color: #e5dcdc; 
-
-  /* values */
-  --max-width: 1280px;
-}
-
 html {
+  font-family: $body-font;
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--main-backing-color);
-  color: var(--flat-black-color);
+  background: $main-backing-color;
+  color: $flat-black-color;
   display: flex;
   flex-direction: column;
-  font-family: var(--body-font);
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 ul, ol {
-  font-family: var(--body-font);
+  font-family: $body-font;
   list-style: none;
 }
 

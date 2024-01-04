@@ -1,7 +1,6 @@
 import "./ReservationTimePicker.scss";
 import { useContext } from "react";
 import { AppContext } from "../../index.js";
-// import { useState } from 'react';
 
 const ReservationTimePicker = () => {
   const { 
@@ -34,8 +33,6 @@ const ReservationTimePicker = () => {
   const handlePeriodChange = (e) => {
     setSelectedPeriod(e.target.value);
   };
-
-  // console.log(`${selectedPeriod === "PM" ? selectedHour + 12 :selectedHour}:${selectedMinute}`)
 
   return (
     <div className="reservationTimePicker">

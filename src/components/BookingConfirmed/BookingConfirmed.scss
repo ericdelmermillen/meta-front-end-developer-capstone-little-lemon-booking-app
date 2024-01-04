@@ -1,7 +1,9 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .bookingConfirmed {
   align-items: center;
-  background: var(--main-backing-color);
-  border: 1px solid var(--logo-green-color);
+  background: $main-backing-color;
+  border: 1px solid $logo-green-color;
   border-radius: 15px;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -25,7 +27,7 @@
   }
 
   &__heading {
-    color: var(--logo-green-color);
+    color: $logo-green-color;
     text-align: center;
   }
 
@@ -54,13 +56,13 @@
 
 
   &__button {
-    color: var(--off-white-color);
+    color: $off-white-color;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: var(--logo-green-color);
+    background-color: $logo-green-color;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-align: center;
     width: 8rem;
@@ -70,9 +72,9 @@
     }
   
     &:hover {
-      background-color: var(--off-white-color);
-      color: var(--logo-green-color);
-      outline: 2px solid var(--logo-green-color);
+      background-color: $off-white-color;
+      color: $logo-green-color;
+      outline: 2px solid $logo-green-color;
     }
   
     &:focus {
@@ -92,7 +94,6 @@
     
     @media(min-width: 768px) {
       font-size: 2rem;
-
     }
   }
 }

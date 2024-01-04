@@ -1,7 +1,5 @@
-.home {
+@use "../../../styles/partials/variables.scss" as *;
 
-  &__h1 {
-  color: red;
-  }
-  
+.home {
+  color: inherit;
 }

@@ -1,41 +1,44 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .reservationDatePicker {
   position: relative;
   min-width: 15rem;
   
   &__input {
+    border: 1px solid $flat-black-color;
     border-radius: 8px;
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
-    height: 2.5rem;
-    width: 14.5rem;
-    text-align: center;
+    color: $flat-black-color;
     font-family: inherit;
     font-size: 1rem;
-    padding: 0.5rem 0.5rem;
-    border: 1px solid var(--flat-black-color);
-    color: var(--flat-black-color);
+    height: 2.5rem;
     margin-top: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    width: 14.5rem;
   }
   
   &__input.wide {
-    text-align: left;
-    width: 16.5rem;
     background-image: url(../../assets/calendar.png);
     background-repeat: no-repeat;
     background-position: 95% 35%; 
     background-size: 1.5rem 1.5rem;
+    text-align: left;
+    width: 16.5rem;
   }
 
   &__input:focus {
-    outline: 1px solid var(--logo-green-color);
+    outline: 1px solid $logo-green-color;
+    box-shadow: inset 0 0 5px #0000004d;
   }
 
   &__icon {
-    width: 1.5rem;
     height: 1.5rem;
-    color: red;
     position: absolute;
     right: 0.5rem;
     top: 50%;
     transform: translateY(-50%);
+    width: 1.5rem;
   }
 }
+

@@ -1,6 +1,8 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .nav {
   align-items: center;
-  background-color: var(--accent-green-color);
+  background-color: $accent-green-color;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -13,7 +15,6 @@
   transition: all 600ms ease;
   width: 0;
   z-index: 5;
-  
   
   @media (min-width: 768px) {
     height: 4rem;
@@ -49,8 +50,8 @@
   }
   
   &.show > &__inner-content {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
     height: 100%;
   }
@@ -85,7 +86,7 @@
 }
 
 .nav__options {
-  color: var(--off-white-color);
+  color: $off-white-color;
   font-weight: 400;
   letter-spacing: 6px;
   padding-block: 1rem;
@@ -93,7 +94,7 @@
 }
 
 .nav__options:hover {
-  color: #f4ce14;
+  color: $accent-yellow;
   font-weight: bold;
 }
 

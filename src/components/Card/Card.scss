@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .card {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -11,7 +13,7 @@
   }
   
   &__header {
-    color: var(--accent-green-color);
+    color: $accent-green-color;
     font-size: max(2vw, 1.75rem);
     margin-bottom: 0.5rem;
     text-align: center;

@@ -1,8 +1,9 @@
+@use "../../styles/partials/variables.scss" as *;
+
 .main {
-  background-color: var(--main-backing-color);
+  background-color: $main-backing-color;
   display: flex;
   flex-direction: column;
-  font-family: var(--body-font);
   margin-top: -100vh;
   padding-top: 6rem;
 
@@ -10,7 +11,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-inline: auto;
     margin-top: 0;
-    max-width: var(--max-width);
     min-height: calc(100vh - (14rem));
     padding-top: 0;
   }
@@ -53,8 +53,7 @@
   }
   
   &__heading {
-    color: var(--accent-green-color);
-    font-family: Arial, Helvetica, sans-serif;
+    color: $accent-green-color;
     font-size: 8vw;
     font-weight: 500;
     letter-spacing: 2px;
@@ -69,7 +68,7 @@
   }
   
   &__promo-text {
-    color: var(--accent-green-color);
+    color: $accent-green-color;
     font-size: max(4vw, 2.2rem);
     font-weight: 400;
     line-height: 2;
@@ -98,7 +97,7 @@
 
 .main__cards {
   align-items: center;
-  background-color: var(--main-backing-color);
+  background-color: $main-backing-color;
   display: flex;
   flex-direction: column;
   padding: 1.25rem;
