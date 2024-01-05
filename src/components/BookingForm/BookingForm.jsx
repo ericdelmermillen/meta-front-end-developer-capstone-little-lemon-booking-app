@@ -89,19 +89,14 @@ const BookingForm = () => {
       
       if (!isNameValid || !isEmailValid) {
         return;
-      } 
-      
-        // const reservationTimeString = selectedPeriod === 'PM' ? `${selectedHour + 12}:${selectedMinute === 0 ? "00:00" : selectedMinute}:00` : `${selectedPeriod === 'PM' ? selectedHour + 12 : selectedHour}:${selectedMinute === 0 ? "00" : selectedMinute}` + ":00"
-        
-        // console.log(new Date(`${dateString} ${reservationTimeString}`))
-        // console.log(reservationTimeString)
-        
+      } else { 
         setShowBookingForm(false);
         setShowBookingConfirmed(true);
         setGuestNumber(1);
         setReservationDate(reservationDate);
         setFormattedReservationDate(formattedReservationDate);
         setGuestNumber(guestNumber);
+      }
     }
   
   return (

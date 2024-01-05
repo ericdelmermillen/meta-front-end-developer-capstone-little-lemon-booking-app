@@ -1,7 +1,7 @@
 import './App.scss';
 import { Route, Routes } from "react-router-dom";
 import { useContext } from "react"; 
-import { AppContext } from "./index.js";
+import { AppContext } from "../src/index.js";
 
 import Header from './components/Header/Header.jsx';
 import Nav from "../src/components/Nav/Nav.jsx";

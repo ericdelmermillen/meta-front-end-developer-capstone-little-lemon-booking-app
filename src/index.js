@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -74,8 +75,12 @@ const AppProvider = ({ children }) => {
   return <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>;
 };
 
-
-const root = createRoot(document.getElementById('root'));
+// const root = createRoot(document.getElementById('root'));
+const root =
+  process.env.NODE_ENV === 'test'
+    ? ReactDOM.createRoot(document.createElement('div'))
+    : ReactDOM.createRoot(document.getElementById('root'));
+    
 root.render(
   <React.StrictMode>
     <BrowserRouter> 
