@@ -35,26 +35,28 @@ const BookingForm = () => {
     setEmailIsInvalid,
     windowWidth
   } = useContext(AppContext);
+  
+    const handleNameChange = (e) => {
+      setReservationName(e.target.value);
+      nameIsInvalid && nameValidation()
+    }
+    
+    const handleEmailChange = (e) => {
+      setReservationEmail(e.target.value);
+      emailIsInvalid && emailValidation()
+    }
 
   const nameValidation = () => {
     const isInvalidName = reservationName.trim().length < 2;
     setNameIsInvalid(isInvalidName);
+    return !isInvalidName; 
   }
 
   const emailValidation = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isInvalidEmail = !emailRegex.test(reservationEmail);
     setEmailIsInvalid(isInvalidEmail);
-  }
-
-  const handleNameChange = (e) => {
-    setReservationName(e.target.value);
-    nameIsInvalid && nameValidation()
-  }
-  
-  const handleEmailChange = (e) => {
-    setReservationEmail(e.target.value);
-    emailIsInvalid && emailValidation()
+    return !isInvalidEmail; 
   }
 
   const clearInputs = () => {
@@ -75,37 +77,36 @@ const BookingForm = () => {
   const handleCancel = () => {
     setShowBookingForm(false);
     clearInputs();
-
   }
 
-  const handleSubmit = () => {
-    nameValidation()
-
-    const dateString = (
-      `${new Date(reservationDate).getDate()}-${new Date(reservationDate).getMonth() + 1}-${new Date(reservationDate).getFullYear()}`)
-    
-    const reservationTimeString = selectedPeriod === 'PM' ? `${selectedHour + 12}:${selectedMinute === 0 ? "00:00" : selectedMinute}:00` : `${selectedPeriod === 'PM' ? selectedHour + 12 : selectedHour}:${selectedMinute === 0 ? "00" : selectedMinute}` + ":00"
-
-    // console.log(new Date(`${dateString} ${reservationTimeString}`))
-    // console.log(reservationTimeString)
-
-
-
-    setShowBookingForm(false);
-    setShowBookingConfirmed(true);
-    // setReservationName("");
-    // setReservationEmail("");
-    setGuestNumber(1);
-    // setExtraInfo("");
-    setReservationDate(reservationDate);
-    setFormattedReservationDate(formattedReservationDate);
-    setGuestNumber(guestNumber);
-  }
-
+  const handleSubmit = (e) => {
+    let isNameValid = nameValidation();
+    let isEmailValid = emailValidation();
+    const dateWithoutTime = reservationDate.toISOString().split('T')[0];
+    const today = new Date().toISOString().split('T')[0];
+    const todayHour = new Date().getHours();
+    console.log(dateWithoutTime > today)
+      
+      if (!isNameValid || !isEmailValid) {
+        return;
+      } 
+      
+        // const reservationTimeString = selectedPeriod === 'PM' ? `${selectedHour + 12}:${selectedMinute === 0 ? "00:00" : selectedMinute}:00` : `${selectedPeriod === 'PM' ? selectedHour + 12 : selectedHour}:${selectedMinute === 0 ? "00" : selectedMinute}` + ":00"
+        
+        // console.log(new Date(`${dateString} ${reservationTimeString}`))
+        // console.log(reservationTimeString)
+        
+        setShowBookingForm(false);
+        setShowBookingConfirmed(true);
+        setGuestNumber(1);
+        setReservationDate(reservationDate);
+        setFormattedReservationDate(formattedReservationDate);
+        setGuestNumber(guestNumber);
+    }
+  
   return (
     <>
       <form className={`bookingForm ${showBookingForm && "show"}`}>
-        {/* <h1 className="bookingForm__h1">Reserve A Table</h1> */}
 
         <label 
           className="bookingForm__label" 

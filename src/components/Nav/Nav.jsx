@@ -22,8 +22,8 @@ const Nav = () => {
     }
 
     window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
+      top: 0
     });
   }
   
