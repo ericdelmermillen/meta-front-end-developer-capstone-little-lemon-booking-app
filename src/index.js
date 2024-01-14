@@ -1,8 +1,7 @@
 import ReactDOM from 'react-dom';
-import { createRoot } from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import React, { useState, createContext, useContext } from "react"; 
+import React, { useState, createContext } from "react"; 
 
 const formatDate = (date) => {
   const options = {
