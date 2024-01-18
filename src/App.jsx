@@ -71,6 +71,16 @@ const clearInputs = () => {
     setFormattedReservationDate(new Date().toLocaleDateString())
   }
 
+  const handleTouchOffDiv = () => {
+    if(showNav) {
+      setShowNav(false)
+    } else if(showBookingForm) {
+      setShowBookingForm(false)
+    } else if(showBookingConfirmed) {
+      setShowBookingConfirmed(false)
+    }
+  }
+
   return (
     <>
       <div className="app">
@@ -79,6 +89,10 @@ const clearInputs = () => {
           <FloatingBookingButton />
           <BookingForm />
           <BookingConfirmed clearInputs={clearInputs}/>
+          {(showNav || showBookingForm || showBookingConfirmed) &&
+            <div className="touchOffDiv"
+              onClick={handleTouchOffDiv}
+            ></div>}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
