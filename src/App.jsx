@@ -1,6 +1,6 @@
 import './App.scss';
 import { Route, Routes } from "react-router-dom";
-import { useContext } from "react"; 
+import { useContext, useEffect } from "react"; 
 import { AppContext } from "../src/index.js";
 
 import Header from './components/Header/Header.jsx';
@@ -80,6 +80,10 @@ const clearInputs = () => {
       setShowBookingConfirmed(false)
     }
   }
+
+  useEffect(() => {
+    setShowNav(false)
+  }, [windowWidth])
 
   return (
     <>
