@@ -5,16 +5,7 @@ import ReservationDatePicker from "../ReservationDatePicker/ReservationDatePicke
 import ReservationTimePicker from "../ReservationTimePicker/ReservationTimePicker.jsx";
 import GuestNumberSelector from "../GuestNumberSelector/GuestNumberSelector.jsx";
 
-
-
-
-const getScreenHeight = () => {
-  const screenHeight = window.innerHeight;
-  console.log(`Screen height: ${screenHeight}px`);
-}
-
-
-const BookingForm = () => {
+const BookingForm = ({formatDate}) => {
   const { 
     showBookingForm, 
     setShowBookingForm,
@@ -99,11 +90,16 @@ const BookingForm = () => {
       if (!isNameValid || !isEmailValid) {
         return;
       } else { 
+
+        // setReservationDate(date)
+        // setFormattedReservationDate(formatDate(date));
+
         setShowBookingForm(false);
         setShowBookingConfirmed(true);
         setGuestNumber(1);
         setReservationDate(reservationDate);
-        setFormattedReservationDate(formattedReservationDate);
+        // setFormattedReservationDate(formattedReservationDate);
+        setFormattedReservationDate(formatDate(reservationDate));
         setGuestNumber(guestNumber);
       }
     }

@@ -16,7 +16,7 @@ import About from './components/Pages/About/About.jsx';
 import Booking from "./components/Pages/Booking/Booking.jsx"
 import NotFound from './components/Pages/NotFound/NotFound.jsx';
   
-  const App = () => {
+const App = ({formatDate}) => {
   const { 
     showNav,
     setShowNav,
@@ -87,7 +87,7 @@ const clearInputs = () => {
           <Header />
           <Nav />
           <FloatingBookingButton />
-          <BookingForm />
+          <BookingForm formatDate={formatDate}/>
           <BookingConfirmed clearInputs={clearInputs}/>
           {(showNav || showBookingForm || showBookingConfirmed) &&
             <div className="touchOffDiv"

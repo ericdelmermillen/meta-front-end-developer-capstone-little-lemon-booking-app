@@ -84,7 +84,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter> 
       <AppProvider>
-        <App />
+        <App formatDate={formatDate}/>
       </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
