@@ -24,6 +24,10 @@ const ReservationDatePicker = () => {
     return date.toLocaleDateString(undefined, options);
   };
 
+  const handleDatePickerKeyboard = (e) => {
+    e.target.readOnly = true;
+  }
+
   return (
     <>
       <DatePicker
@@ -36,6 +40,7 @@ const ReservationDatePicker = () => {
         value={reservationDate ? formatDate(reservationDate) : ''}
         className={`reservationDatePicker__input ${windowWidth > 400 && "wide"}`}
         minDate={new Date()}
+        onFocus={(e) => handleDatePickerKeyboard(e)}
       />
     </>
   )};

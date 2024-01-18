@@ -5,6 +5,15 @@ import ReservationDatePicker from "../ReservationDatePicker/ReservationDatePicke
 import ReservationTimePicker from "../ReservationTimePicker/ReservationTimePicker.jsx";
 import GuestNumberSelector from "../GuestNumberSelector/GuestNumberSelector.jsx";
 
+
+
+
+const getScreenHeight = () => {
+  const screenHeight = window.innerHeight;
+  console.log(`Screen height: ${screenHeight}px`);
+}
+
+
 const BookingForm = () => {
   const { 
     showBookingForm, 
@@ -140,9 +149,9 @@ const BookingForm = () => {
               htmlFor="reservationDate">
                 Reservation Date:
             </label>
-            <ReservationDatePicker 
-              aria-label="Reservation Date"
-              id="reservationDate" />
+              <ReservationDatePicker
+                aria-label="Reservation Date"
+                id="reservationDate" />
           </div>
           
           <div className="bookingForm__guestsAndTime">
