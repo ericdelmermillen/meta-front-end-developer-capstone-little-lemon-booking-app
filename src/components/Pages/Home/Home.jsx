@@ -1,13 +1,11 @@
 import "./Home.scss";
 import Main from "../../Main/Main";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Home = () => {
-  const userAgent = navigator.userAgent;
-  const [isMobile, setIsMobile] = useState(/Mobi|Android/i.test(userAgent));
 
   return (
-    <div className={`${isMobile ? "home mobile" : "home"}`}>
+    <div className="home mobile">
       <Main />
     </div>
   )};

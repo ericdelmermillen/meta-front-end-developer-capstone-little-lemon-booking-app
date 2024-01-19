@@ -33,7 +33,7 @@ const Booking = () => {
                   </div>
               </div>
               <p className="hero__blurb">
-                Little Lemon can accomodate groups of up to 12 people.
+                Little Lemon can seat groups of up to 12 people.
               </p>
             </div>
             <div className="hero__right">
