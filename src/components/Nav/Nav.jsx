@@ -62,13 +62,10 @@ const Nav = () => {
             className="nav__menu-toggle" 
             src={menuToggle} 
             alt="menu logo" 
-            onClick={toggleNav}
-            />
-          {/* need to make these toggle showNav */}
-          {/* Link around the li or the word? */}
+            onClick={toggleNav}/>
+
           <ul className="nav__nav-bar">
             <li className="nav__options">
-              {/* make HOME go to top if page is / or /home */}
               <Link 
                 onClick={handleNavLinkClick}
                 to="/">
