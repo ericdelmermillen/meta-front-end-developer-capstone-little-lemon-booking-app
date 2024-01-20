@@ -1,0 +1,153 @@
+@use "../../../styles/partials/variables.scss" as *;
+
+.menuTwo {
+  margin-top: calc(-100vh + 2rem);
+  border: 2px solid red;
+  
+  @media(min-width: 768px) {
+    // margin-inline: auto;
+    margin-top: 0;
+  }
+
+  &__content {
+    // margin-top: 2rem;
+    max-width: 100%;
+    
+    @media(min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  .hero {
+    background: yellow;
+    height: calc(100vh - 2.5rem);
+    // height: calc(100vh - 7rem);
+    
+    @media(min-width: 768px) {
+      display: flex;
+    }
+    
+    
+    &__left {
+      // align-items: center;
+      // color: $flat-white-color;
+      // display: flex;
+      // flex-direction: column;
+      // height: 100%;
+      // justify-content: center;
+      // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+      width: 100%;
+      z-index: 2;
+      
+      background-image: url(../../../assets/images/three_plates.jpg);
+      background-position: center center; 
+      background-repeat: no-repeat; 
+      background-size: cover; 
+      height: 100%;
+      max-width: 100%;
+      
+      @media(min-width: 768px) {
+        color: $accent-green-color;
+        background-image: url();
+        height: auto;
+        padding-inline: 2rem;
+        position: static;
+        text-shadow: none; 
+      }
+      
+      @media(min-width: 1000px) {
+        padding-inline: 4rem;
+      }
+      
+      @media(min-width: 1200px) {
+        padding-inline: 5rem;
+      }
+    }
+    
+    &__overlay-container {
+    padding-inline: 2rem;
+    background: rgba(0, 128, 0, 0.305);
+    
+    align-items: center;
+    color: $flat-white-color;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
+    border: 2px solid blue;
+    min-width: 100%;
+    height: 100%;
+    
+    @media(min-width: 768px) {
+      background: none;
+
+    }
+
+  }
+      
+    &__heading {
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+      text-align: center; 
+      
+      @media(min-width: 500px) {
+        margin-top: 15%;
+      }
+      
+      @media(min-width: 768px) {
+        font-size: 2.75rem;
+        margin-top: 18%;
+      }
+      
+      @media(min-width: 1000px) {
+        margin-top: 10%;
+      }  
+    }
+
+    &__subheading { 
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      line-height: 1.75;
+      margin-top: 10%;
+      text-align: center;
+      
+      @media(min-width: 768px) {
+        font-size: 1.75rem;
+        letter-spacing: 1.5px;
+        margin-top: 8%;
+        text-align: left;
+      }
+    }
+        
+    &__blurb { 
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1.75px;
+      line-height: 2.25;
+      margin-top: 10%;
+      
+      @media(min-width: 768px) {
+        margin-top: 8%;
+        text-align: left;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      background: orange;
+      display: none;
+      
+      @media(min-width: 768px) {
+        display: flex;
+
+      }
+    }
+
+  }
+  
+}

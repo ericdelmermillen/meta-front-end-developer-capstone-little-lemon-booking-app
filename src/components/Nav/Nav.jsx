@@ -80,6 +80,14 @@ const Nav = () => {
                   MENU
               </Link>
             </li>
+
+            <li className="nav__options">
+              <Link 
+                onClick={handleNavLinkClick}
+                to="/menutwo">
+                  MENUTWO
+              </Link>
+            </li>
             
             <li className="nav__options">
               <Link 

@@ -1,7 +1,7 @@
 @use "../../../styles/partials/variables.scss" as *;
 
 .menu {
-  margin-top: calc(-100dvh + 4rem);
+  margin-top: calc(-100vh + 4rem);
   
   @media(min-width: 768px) {
     margin-inline: auto;
@@ -48,19 +48,18 @@
           text-shadow: none; 
         }
     
-      @media(min-width: 1000px) {
-        padding-inline: 4rem;
-      }
+        @media(min-width: 1000px) {
+          padding-inline: 4rem;
+        }
       
-      @media(min-width: 1200px) {
-        padding-inline: 5rem;
+        @media(min-width: 1200px) {
+          padding-inline: 5rem;
+        }
       }
-    }
     
     &__heading {
       font-size: 2.5rem;
       letter-spacing: 1.5px;
-      margin-top: 18%;
       text-align: center; 
       
       @media(min-width: 500px) {
