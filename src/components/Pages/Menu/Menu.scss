@@ -2,7 +2,6 @@
 
 .menu {
   margin-top: calc(-100dvh + 4rem);
-  max-width: 1280px;
   
   @media(min-width: 768px) {
     margin-inline: auto;
@@ -33,19 +32,22 @@
         color: $flat-white-color;
         display: flex;
         flex-direction: column;
+        height: 100%;
         justify-content: center;
         padding-inline: 2rem;
         position: absolute;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
         width: 100%;
         z-index: 2;
-      
-      @media(min-width: 768px) {
-        color: $accent-green-color;
-        padding-inline: 2rem;
-        position: static;
-        text-shadow: none; 
-      }
+        border: 2px solid red;
+        
+        @media(min-width: 768px) {
+          color: $accent-green-color;
+          height: auto;
+          padding-inline: 2rem;
+          position: static;
+          text-shadow: none; 
+        }
     
       @media(min-width: 1000px) {
         padding-inline: 4rem;
