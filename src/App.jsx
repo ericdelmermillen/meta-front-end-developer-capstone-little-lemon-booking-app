@@ -12,7 +12,6 @@ import FloatingBookingButton from "../src/components/FloatingBookingButton/Float
 
 import Home from './components/Pages/Home/Home.jsx';
 import Menu from './components/Pages/Menu/Menu.jsx';
-import MenuTwo from './components/Pages/MenuTwo/MenuTwo.jsx';
 import About from './components/Pages/About/About.jsx';
 import Booking from "./components/Pages/Booking/Booking.jsx"
 import NotFound from './components/Pages/NotFound/NotFound.jsx';
@@ -85,7 +84,6 @@ const clearInputs = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/menutwo" element={<MenuTwo />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/booking" element={<Booking />} />
