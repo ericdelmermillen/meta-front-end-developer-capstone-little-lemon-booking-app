@@ -39,7 +39,6 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
         width: 100%;
         z-index: 2;
-        border: 2px solid red;
         
         @media(min-width: 768px) {
           color: $accent-green-color;
@@ -131,12 +130,13 @@
       background-position: center center; 
       background-repeat: no-repeat; 
       background-size: cover; 
-      height: calc(100dvh - (6rem));
+      height: 100%;
       max-width: 100%;
       
       @media(min-width: 768px) {
         border-radius: 8px;
         height: 100%;
+        width: 100%;
       }
     }
   
