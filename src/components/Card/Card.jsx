@@ -1,6 +1,6 @@
 import "./Card.scss";
 
-const Card = ( { headerText, cardImg, cardImgAlt, cardText } ) => {
+const Card = ( { headerText, cardImg, cardImgAlt, cardTextOne, cardTextTwo, cardTextThree } ) => {
   return (
     <>
      <div className="card">
@@ -12,7 +12,13 @@ const Card = ( { headerText, cardImg, cardImgAlt, cardText } ) => {
           src={cardImg} 
           alt={cardImgAlt} />
         <p className="card__info">
-          {cardText}
+          {cardTextOne}
+        </p>
+        <p className="card__info">
+          {cardTextTwo}
+        </p>
+        <p className="card__info">
+          {cardTextThree}
         </p>
       </div> 
     </>

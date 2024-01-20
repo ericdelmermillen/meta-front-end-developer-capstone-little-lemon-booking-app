@@ -25,7 +25,7 @@ const Main = () => {
                 alt="square logo"  />
             </div>
             <h2 className="banner__promo-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex harum ipsa porro. Aliquid, molestias!
+            Indulge Your Senses in a Culinary Journey at Little Lemon – Where Mediterranean Flavors Unite! 
             </h2>
           </article>
         </section>
@@ -36,22 +36,25 @@ const Main = () => {
             headerText={"Our Menu"}
             cardImg={menu}
             cardImgAlt={"Meze Platter from Little Lemon"}
-            cardText={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?"}
+            cardTextOne={"Immerse yourself in the vibrant colors, aromatic spices, and savory delights of our authentic Mediterranean cuisine."}
           />
 
           <Card 
             headerText={"Book A Table"}
             cardImg={interior}
             cardImgAlt={"The interior of the Little Lemon restaurant"}
-            cardText={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?"}
+            cardTextOne={"Whether you're celebrating a special occasion or planning a casual get-together, our online reservation system allows you to effortlessly secure your spot."}
           />
 
           <Card 
             headerText={"Opening Hours"}
             cardImg={openingHours}
             cardImgAlt={"Restaurant Open Sign"}
-            cardText={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis reprehenderit enim eaque dolores natus voluptatibus, architecto cumque veritatis nam nisi tempore ratione saepe ea?"}
+            cardTextOne={"Mon - Fri: 11AM - 10PM."}
+            cardTextTwo={"Sat: 10AM - 11PM."}
+            cardTextThree={"Sun: 11AM - 8PM."}
           />
+
         </section>
       </main>
     </>

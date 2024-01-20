@@ -40,7 +40,7 @@ const Menu = () => {
               headerText={"Bruchetta"}
               cardImg={bruchetta}
               cardImgAlt={"Bruchetta appettizer"}
-              cardText={"$12.99"}
+              cardTextOne={"$12.99"}
             />
 
             <Card 
@@ -48,7 +48,7 @@ const Menu = () => {
               headerText={"Greek Salad"}
               cardImg={greekSalad}
               cardImgAlt={"Greek Salad"}
-              cardText={"$18.99"}
+              cardTextOne={"$18.99"}
             />
 
             <Card 
@@ -56,7 +56,7 @@ const Menu = () => {
               headerText={"Lemon Cake"}
               cardImg={desert}
               cardImgAlt={"Lemon Cake"}
-              cardText={"$10.99"}
+              cardTextOne={"$10.99"}
             />
 
             </div>
