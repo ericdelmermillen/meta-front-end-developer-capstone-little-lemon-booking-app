@@ -59,20 +59,16 @@
       &__heading {
         font-size: 2.5rem;
         letter-spacing: 1.5px;
-        margin-top: 18%;
         text-align: center; 
         
         @media(min-width: 500px) {
-          margin-top: 15%;
         }
         
         @media(min-width: 768px) {
           font-size: 2.75rem;
-          margin-top: 18%;
         }
         
         @media(min-width: 1000px) {
-          margin-top: 10%;
         }
       }
       
