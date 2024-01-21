@@ -83,18 +83,17 @@
       width: 100%;
     }
   }
-}
-
-.nav__options {
-  color: $off-white-color;
-  font-weight: 400;
-  letter-spacing: 6px;
-  padding-block: 1rem;
-  text-align: center;
-}
-
-.nav__options:hover {
-  color: $accent-yellow;
-  font-weight: bold;
+  
+  &__options {
+    color: $off-white-color;
+    font-weight: 400;
+    letter-spacing: 6px;
+    padding-block: 1rem;
+    text-align: center;
+  }
+  
+  &__options:hover {
+    color: $accent-yellow;
+  }
 }
 
