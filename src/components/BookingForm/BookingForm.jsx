@@ -5,7 +5,7 @@ import ReservationDatePicker from "../ReservationDatePicker/ReservationDatePicke
 import ReservationTimePicker from "../ReservationTimePicker/ReservationTimePicker.jsx";
 import GuestNumberSelector from "../GuestNumberSelector/GuestNumberSelector.jsx";
 
-const BookingForm = ({formatDate}) => {
+const BookingForm = ({ formatDate, handleInvalidName, handleInvalidEmail }) => {
   const { 
     showBookingForm, 
     setShowBookingForm,
@@ -36,15 +36,15 @@ const BookingForm = ({formatDate}) => {
     windowWidth
   } = useContext(AppContext);
   
-    const handleNameChange = (e) => {
-      setReservationName(e.target.value);
-      nameIsInvalid && nameValidation()
-    }
-    
-    const handleEmailChange = (e) => {
-      setReservationEmail(e.target.value);
-      emailIsInvalid && emailValidation()
-    }
+  const handleNameChange = (e) => {
+    setReservationName(e.target.value);
+    nameIsInvalid && nameValidation()
+  }
+  
+  const handleEmailChange = (e) => {
+    setReservationEmail(e.target.value);
+    emailIsInvalid && emailValidation()
+  }
 
   const nameValidation = () => {
     const isInvalidName = reservationName.trim().length < 2;
@@ -56,6 +56,7 @@ const BookingForm = ({formatDate}) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isInvalidEmail = !emailRegex.test(reservationEmail);
     setEmailIsInvalid(isInvalidEmail);
+
     return !isInvalidEmail; 
   }
 
@@ -82,10 +83,22 @@ const BookingForm = ({formatDate}) => {
   const handleSubmit = (e) => {
     let isNameValid = nameValidation();
     let isEmailValid = emailValidation();
+
+    if(!isNameValid) {
+      handleInvalidName();
+    }
+
+    if(!isEmailValid) {
+      setTimeout(() => {
+        handleInvalidEmail()
+
+      }, 250)
+    }
+
     const dateWithoutTime = reservationDate.toISOString().split('T')[0];
     const today = new Date().toISOString().split('T')[0];
     const todayHour = new Date().getHours();
-    console.log(dateWithoutTime > today)
+    // console.log(dateWithoutTime > today)
       
       if (!isNameValid || !isEmailValid) {
         return;

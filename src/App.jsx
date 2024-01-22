@@ -2,6 +2,8 @@ import './App.scss';
 import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react"; 
 import { AppContext } from "../src/index.js";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import Header from './components/Header/Header.jsx';
 import Nav from "../src/components/Nav/Nav.jsx";
@@ -55,6 +57,7 @@ const clearInputs = () => {
     setFormattedReservationDate(new Date().toLocaleDateString())
   }
 
+
   const handleTouchOffDiv = () => {
     if(showNav) {
       setShowNav(false)
@@ -63,6 +66,14 @@ const clearInputs = () => {
     } else if(showBookingConfirmed) {
       setShowBookingConfirmed(false)
     }
+  }
+
+  const handleInvalidName = () => {
+    toast("🍋 Reservation name minimum 2 characters...");
+  }
+
+  const handleInvalidEmail = () => {
+    toast("🍋 Sorry, we need a valid email...");
   }
 
   useEffect(() => {
@@ -75,7 +86,11 @@ const clearInputs = () => {
           <Header />
           <Nav />
           <FloatingBookingButton />
-          <BookingForm formatDate={formatDate}/>
+          <BookingForm 
+            formatDate={formatDate}
+            handleInvalidName={handleInvalidName}
+            handleInvalidEmail={handleInvalidEmail}
+          />
           <BookingConfirmed clearInputs={clearInputs}/>
           {(showNav || showBookingForm || showBookingConfirmed) &&
             <div className="touchOffDiv"
@@ -90,6 +105,18 @@ const clearInputs = () => {
             <Route path="/*" element={<NotFound />} />
           </Routes>
         <Footer/>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover={false}
+          theme="light"
+        />
       </div>
     </>
 )};
