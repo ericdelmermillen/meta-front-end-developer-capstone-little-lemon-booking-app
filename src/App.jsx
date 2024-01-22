@@ -58,6 +58,12 @@ const clearInputs = () => {
   }
 
 
+  const handleCancel = () => {
+    setShowBookingForm(false);
+    clearInputs();
+  }
+
+
   const handleTouchOffDiv = () => {
     if(showNav) {
       setShowNav(false)
@@ -66,6 +72,7 @@ const clearInputs = () => {
     } else if(showBookingConfirmed) {
       setShowBookingConfirmed(false)
     }
+    handleCancel()
   }
 
   const handleInvalidName = () => {
@@ -90,6 +97,7 @@ const clearInputs = () => {
             formatDate={formatDate}
             handleInvalidName={handleInvalidName}
             handleInvalidEmail={handleInvalidEmail}
+            handleCancel={handleCancel}
           />
           <BookingConfirmed clearInputs={clearInputs}/>
           {(showNav || showBookingForm || showBookingConfirmed) &&

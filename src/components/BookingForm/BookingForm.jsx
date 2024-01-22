@@ -5,7 +5,7 @@ import ReservationDatePicker from "../ReservationDatePicker/ReservationDatePicke
 import ReservationTimePicker from "../ReservationTimePicker/ReservationTimePicker.jsx";
 import GuestNumberSelector from "../GuestNumberSelector/GuestNumberSelector.jsx";
 
-const BookingForm = ({ formatDate, handleInvalidName, handleInvalidEmail }) => {
+const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvalidEmail }) => {
   const { 
     showBookingForm, 
     setShowBookingForm,
@@ -73,11 +73,6 @@ const BookingForm = ({ formatDate, handleInvalidName, handleInvalidEmail }) => {
     setSelectedPeriod(new Date().getHours() < 12 ? 'AM' : 'PM');
     setExtraInfo("")
     setGuestNumber(1);
-  }
-
-  const handleCancel = () => {
-    setShowBookingForm(false);
-    clearInputs();
   }
 
   const handleSubmit = (e) => {
