@@ -8,15 +8,10 @@ const BookingConfirmed = ( {clearInputs} ) => {
     showBookingConfirmed, 
     setShowBookingConfirmed,
     formattedReservationDate, 
-    setFormattedReservationDate,
     selectedHour, 
-    setSelectedHour,
     selectedMinute, 
-    setSelectedMinute,
     selectedPeriod, 
-    setSelectedPeriod,
-    guestNumber, 
-    setGuestNumber
+    guestNumber
   } = useContext(AppContext);
 
   const handleConfirmed = () => {

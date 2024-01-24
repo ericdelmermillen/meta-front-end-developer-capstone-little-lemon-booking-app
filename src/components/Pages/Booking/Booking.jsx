@@ -7,8 +7,6 @@ const Booking = () => {
     const { 
       showBookingForm, 
       setShowBookingForm,
-      showBookingConfirmed, 
-      setShowBookingConfirmed
     } = useContext(AppContext);
   
   const handleReserve = () => {

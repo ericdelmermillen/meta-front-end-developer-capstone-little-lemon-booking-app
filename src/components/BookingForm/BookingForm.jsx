@@ -1,5 +1,5 @@
 import "./BookingForm.scss";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../index.js";
 import ReservationDatePicker from "../ReservationDatePicker/ReservationDatePicker.jsx";
 import ReservationTimePicker from "../ReservationTimePicker/ReservationTimePicker.jsx";
@@ -9,17 +9,12 @@ const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvali
   const { 
     showBookingForm, 
     setShowBookingForm,
-    showBookingConfirmed, 
     setShowBookingConfirmed,
     reservationDate, 
     setReservationDate,
-    formattedReservationDate, 
     setFormattedReservationDate,
-    selectedHour, 
     setSelectedHour,
-    selectedMinute, 
     setSelectedMinute,
-    selectedPeriod, 
     setSelectedPeriod,
     guestNumber, 
     setGuestNumber,
@@ -60,21 +55,6 @@ const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvali
     return !isInvalidEmail; 
   }
 
-  const clearInputs = () => {
-    setReservationName("");
-    setReservationEmail("");
-    setExtraInfo("");
-    setNameIsInvalid(null);
-    setEmailIsInvalid(null);
-    setReservationDate(new Date());
-    setGuestNumber(1);
-    setSelectedHour(new Date().getHours() > 12 ? (new Date().getHours() % 12) + 1: (new Date().getHours() + 1));
-    setSelectedMinute(0);
-    setSelectedPeriod(new Date().getHours() < 12 ? 'AM' : 'PM');
-    setExtraInfo("")
-    setGuestNumber(1);
-  }
-
   const handleSubmit = (e) => {
     let isNameValid = nameValidation();
     let isEmailValid = emailValidation();
@@ -93,20 +73,15 @@ const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvali
     const dateWithoutTime = reservationDate.toISOString().split('T')[0];
     const today = new Date().toISOString().split('T')[0];
     const todayHour = new Date().getHours();
-    // console.log(dateWithoutTime > today)
       
       if (!isNameValid || !isEmailValid) {
         return;
       } else { 
 
-        // setReservationDate(date)
-        // setFormattedReservationDate(formatDate(date));
-
         setShowBookingForm(false);
         setShowBookingConfirmed(true);
         setGuestNumber(1);
         setReservationDate(reservationDate);
-        // setFormattedReservationDate(formattedReservationDate);
         setFormattedReservationDate(formatDate(reservationDate));
         setGuestNumber(guestNumber);
       }

@@ -1,6 +1,6 @@
 import "./ReservationDatePicker.scss";
 import 'react-datepicker/dist/react-datepicker.css';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import DatePicker from 'react-datepicker';
 import { AppContext } from "../../index.js";
 
@@ -8,10 +8,8 @@ const ReservationDatePicker = () => {
   const { 
     reservationDate,
     setReservationDate,
-    formattedReservationDate, 
     setFormattedReservationDate,
     windowWidth,
-    setWindowWidth
   } = useContext(AppContext);
 
   const formatDate = (date) => {
@@ -24,6 +22,7 @@ const ReservationDatePicker = () => {
     return date.toLocaleDateString(undefined, options);
   };
 
+  // prevents onscreen keyboard on mobile browsers
   const handleDatePickerKeyboard = (e) => {
     e.target.readOnly = true;
   }

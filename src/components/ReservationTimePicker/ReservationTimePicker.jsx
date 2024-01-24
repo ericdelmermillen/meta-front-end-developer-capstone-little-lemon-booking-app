@@ -4,12 +4,6 @@ import { AppContext } from "../../index.js";
 
 const ReservationTimePicker = () => {
   const { 
-    showNav, 
-    setShowNav, 
-    scrollYPos, 
-    setScrollYPos, 
-    prevScrollYPos, 
-    setPrevScrollYPos,
     selectedHour, 
     setSelectedHour,
     selectedMinute, 
@@ -47,7 +41,6 @@ const ReservationTimePicker = () => {
         ))}
       </select>
           <span>:</span>
-      {/* <label htmlFor="minutes"></label> */}
       <select id="minutes" value={selectedMinute} onChange={handleMinuteChange}>
         {minutes.map((minute) => (
           <option key={minute} value={minute}>
@@ -69,11 +62,7 @@ const ReservationTimePicker = () => {
         ))}
       </select>
 
-      {/* <p>
-        Selected Time: {selectedHour}:{selectedMinute === 0 ? '00' : selectedMinute} {selectedPeriod}
-      </p> */}
     </div>
-  );
-};
+  )};
 
 export default ReservationTimePicker;

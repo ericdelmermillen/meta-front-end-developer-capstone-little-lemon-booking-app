@@ -36,8 +36,8 @@
   }
 
   &__header, &__sub-header {
-    text-align: center;
     color: $logo-green-color;
-    line-height: 1.5
+    line-height: 1.5;
+    text-align: center;
   }
 }

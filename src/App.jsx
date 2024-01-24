@@ -18,7 +18,7 @@ import About from './components/Pages/About/About.jsx';
 import Booking from "./components/Pages/Booking/Booking.jsx"
 import NotFound from './components/Pages/NotFound/NotFound.jsx';
   
-const App = ({formatDate}) => {
+const App = ({ formatDate }) => {
   const { 
     showNav,
     setShowNav,
@@ -57,12 +57,10 @@ const clearInputs = () => {
     setFormattedReservationDate(new Date().toLocaleDateString())
   }
 
-
   const handleCancel = () => {
     setShowBookingForm(false);
     clearInputs();
   }
-
 
   const handleTouchOffDiv = () => {
     if(showNav) {
@@ -123,8 +121,7 @@ const clearInputs = () => {
           pauseOnFocusLoss={false}
           draggable
           pauseOnHover={false}
-          theme="light"
-        />
+          theme="light"/>
       </div>
     </>
 )};

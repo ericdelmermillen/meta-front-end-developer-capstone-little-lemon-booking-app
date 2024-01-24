@@ -48,7 +48,6 @@ const Header = () => {
           className="header__home-button" 
           onClick={handleHomeButtonClick}
           to="/">
-          {/* conditional: if not on home navigate home otherwise got to top */}
           <img 
             className="header__logo" 
             src={headerLogo} 

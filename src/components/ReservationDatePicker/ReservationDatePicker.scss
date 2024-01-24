@@ -1,8 +1,8 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .reservationDatePicker {
-  position: relative;
   min-width: 15rem;
+  position: relative;
   
   &__input {
     border: 1px solid $flat-black-color;
@@ -20,16 +20,16 @@
   
   &__input.wide {
     background-image: url(../../assets/calendar.png);
-    background-repeat: no-repeat;
     background-position: 95% 35%; 
+    background-repeat: no-repeat;
     background-size: 1.5rem 1.5rem;
     text-align: left;
     width: 16.5rem;
   }
 
   &__input:focus {
-    outline: 1px solid $logo-green-color;
     box-shadow: inset 0 0 5px #0000004d;
+    outline: 1px solid $logo-green-color;
   }
 
   &__icon {

@@ -1,5 +1,4 @@
 import "./Main.scss";
-// import banner from "../../assets/little_lemon_banner--no-logo.jpg";
 import banner from "../../assets/little_lemon_banner--no-logo.jpg";
 import squareLogo from "../../assets/square_logo.png";
 import menu from "../../assets/images/menu.jpg";

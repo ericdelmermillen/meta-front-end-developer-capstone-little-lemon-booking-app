@@ -9,9 +9,7 @@ const Nav = () => {
     showNav, 
     setShowNav, 
     scrollYPos, 
-    setScrollYPos, 
     prevScrollYPos, 
-    setPrevScrollYPos, 
     windowWidth, 
     setWindowWidth
   } = useContext(AppContext);

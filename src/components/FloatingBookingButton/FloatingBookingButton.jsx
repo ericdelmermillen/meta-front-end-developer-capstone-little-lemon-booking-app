@@ -7,8 +7,7 @@ const FloatingBookingButton = () => {
   const { 
     showBookingForm, 
     setShowBookingForm,
-    showBookingConfirmed, 
-    setShowBookingConfirmed
+    showBookingConfirmed
   } = useContext(AppContext);
 
 const handleFloatingButton = () => {
