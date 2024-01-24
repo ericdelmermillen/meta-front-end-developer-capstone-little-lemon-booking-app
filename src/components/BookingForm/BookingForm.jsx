@@ -13,9 +13,6 @@ const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvali
     reservationDate, 
     setReservationDate,
     setFormattedReservationDate,
-    setSelectedHour,
-    setSelectedMinute,
-    setSelectedPeriod,
     guestNumber, 
     setGuestNumber,
     reservationName, 
@@ -69,10 +66,6 @@ const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvali
 
       }, 250)
     }
-
-    const dateWithoutTime = reservationDate.toISOString().split('T')[0];
-    const today = new Date().toISOString().split('T')[0];
-    const todayHour = new Date().getHours();
       
       if (!isNameValid || !isEmailValid) {
         return;
@@ -80,7 +73,6 @@ const BookingForm = ({ formatDate, handleCancel, handleInvalidName, handleInvali
 
         setShowBookingForm(false);
         setShowBookingConfirmed(true);
-        setGuestNumber(1);
         setReservationDate(reservationDate);
         setFormattedReservationDate(formatDate(reservationDate));
         setGuestNumber(guestNumber);
