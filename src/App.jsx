@@ -107,6 +107,7 @@ const clearInputs = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
+            <Route path="/book" element={<Booking />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
