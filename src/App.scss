@@ -19,6 +19,7 @@ body {
   color: $flat-black-color;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 ul, ol {
