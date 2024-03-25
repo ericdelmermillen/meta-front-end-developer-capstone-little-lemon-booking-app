@@ -29,7 +29,7 @@ const Nav = () => {
     const handleResize = () => {
       const newWindowWidth = window.innerWidth;
       
-      if (newWindowWidth !== windowWidth) {
+      if(newWindowWidth !== windowWidth) {
         setWindowWidth(newWindowWidth);
       }
 
@@ -53,7 +53,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`nav ${showNav && "show"} ${prevScrollYPos > scrollYPos && "visible"}`}>
+      <nav className={`nav ${showNav ? "show":  ""} ${prevScrollYPos > scrollYPos && "visible"}`}>
         <div className="nav__inner-content">
               
           <img 
